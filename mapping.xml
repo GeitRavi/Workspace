@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beanio xmlns="http://www.beanio.org/2012/03" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.beanio.org/2011/01 http://www.beanio.org/2011/01/mapping.xsd">
+  <stream name="employeeFile" format="fixedlength" strict="true">
+    <record name="employee" class="com.testing.mavendemo.Employee">
+      <field name="firstName" length="10"/>
+      <field name="lastName" length="10"/>
+      <field name="title" length="10"/>
+      <field name="salary" length="6" padding="0" justify="left" />
+      <field name="hireDate" length="8" format="yyyymmdd" />
+    </record> 
+  </stream>
+</beanio>
