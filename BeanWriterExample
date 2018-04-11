@@ -1,0 +1,29 @@
+package com.testing.mavendemo;
+import org.beanio.*;
+import java.io.*;
+import java.util.*;
+public class BeanWriterExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StreamFactory factory = StreamFactory.newInstance();
+        // load the mapping file
+        factory.load("E:\\PROGRAMMING & WORK\\TestingDoc\\Workspace\\WorkSpace\\mavendemo\\src\\main\\java\\com\\testing\\mavendemo\\mapping.xml");
+        
+        Employee employee = new Employee();
+        employee.setFirstName("Jennifer");
+        employee.setLastName("Jones");
+        employee.setTitle("Marketing");
+        employee.setSalary(60000);
+        employee.setHireDate(new Date());
+        
+        // use a StreamFactory to create a BeanWriter
+        BeanWriter out = factory.createWriter("employeeFile", new File("E:\\PROGRAMMING & WORK\\TestingDoc\\Workspace\\WorkSpace\\mavendemo\\src\\main\\java\\com\\testing\\mavendemo\\employee.txt"));
+        // write an Employee object directly to the BeanWriter
+        out.write(employee);
+        out.flush();
+        out.close();
+
+	}
+
+}
