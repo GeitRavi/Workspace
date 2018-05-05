@@ -1,0 +1,10 @@
+a.stream().collect(Collectors.joining("','", "'", "'")
+
+IntStream.range(0, 5).forEach(
+				i ->    { int y = i+2;
+				System.out.println(y);
+				});
+				
+t.get("Example1").chars().filter(e -> e == (int) ' ').count()
+				
+java.util.Map<String,String > t =  dt.asMap(String.class, String.class)				
