@@ -7,4 +7,21 @@ IntStream.range(0, 5).forEach(
 				
 t.get("Example1").chars().filter(e -> e == (int) ' ').count()
 				
-java.util.Map<String,String > t =  dt.asMap(String.class, String.class)				
+java.util.Map<String,String > t =  dt.asMap(String.class, String.class)		
+
+As discussed in 3 amigo session, if development team implement some logic (method or web service ) which validates input flat file is BULK and NACHA-M and CCE or not, this will then return some response value in output as true/fail (boolean value) against input file, this will be helpful for us, in this case the first acceptance criteria you have proposed will work.
+
+In relation to the second acceptance criteria some for the GIVEN statements are not testable where we need your inputs, example:-
+1. Bulk file is ready to validate - How this condition will be verified? How are we ensuring that file is ready to validate in BPS or this will be our assumption condition/statement for test?
+2.Structural/Meta Data Validation of the Physical file was completed -  How this condition will be verified? Will there be any indication for this in the database or this is our assumption statement for test?
+
+3.A Logical file is pending file header validation - What is the condition to ensure that logical file is pending for validation? Will there be any indication for this in the database or this is our assumption statement for test?
+
+
+As per my understanding for the GIVEN statement in the acceptance criteria we will be creating a sample file as per test scenario and assuming the rest of the pre-conditions are met.
+
+In WHEN statement we will passing flat file to rule engine by method call or by invoking web service, this will depend on development team, how they will be develop this functionality.
+  
+In THEN statement we will be validating that particular rule invoked successfully by checking log message in log file or by checking the record in database, this will be depend upon development team, how they will be develop this functionality.
+
+Please let me know if you are fine for us to assume the condition mention in GIVEN statement? I will then update the test strategy accordingly for this against the story.		
