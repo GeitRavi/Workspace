@@ -1,0 +1,40 @@
+What's the difference between a checked exception and a runtime exception? When would you use which? Does Java really need checked exceptions?
+"Composition should generally be favoured over inheritance." Is this a good rule of thumb? Why?
+What's the difference between the overloading and overriding?
+What's the difference between the heap and the stack? What's is held on what? Why might a stack overflow error occur?
+Why is the String class immutable in Java? How do you add or change a string? What's the maximum size of a String in Java? (If the don't know then ask them how to get the length of a String and the try to get them to reason what the maximum length has to be.)
+What designing a new class in Java what methods should you think about overriding? What's the contract between hashcode and equals? Any other methods? (e.g. ToString, Comparable)
+What's the default behaviour of hashcode if you don't override it? What's the default behaviour of equals? What would be the consequence of returning a constant (say 1) as the return value of the hashcode in your new class? What's 'deep equality'? Is it always desirable? 
+What's the benefit of using an ArrayList over an Array? How is ArrayList actually implemented?
+What's the difference between an ArrayList and a LinkedList? How is LinkedList implemented and how is it designed to be performant?
+When calling Arrays.toList() on an array you then subsequently try to add something to the returned list. What happens? (UnsupportedOperationException). Why is this? (If they don't know try to get them to reason why - immutability. Why is it immutable?)
+Your colleague informs you "Because Java 5 introduced generics, it's impossible to get a ClassCastException" - are they right or wrong about this? (Ask them what type erasure means?)
+What is serialisation? What other ways of serializing are there (e.g. json, xml)? What methods does Serializable implement (trick question)? What about Externalizable?
+How does a HashMap work? Can two threads simultaneously read from a HashMap which has fixed keys and values without any problems? What if the values are not fixed? Can two threads simultaneously write to a HashMap without any problems?  What is the differences between, HashMap, TreeMap, LinkedHashMap?
+How does ConcurrentHashMap differ from HashMap? (A good answer will mention segment locks) How is a CopyOnWriteArrayList different from a simple ArrayList?
+How would you obtain the value of a particular element or attribute on an element in XML file?
+What does keyword volatile mean? Does this provide a good way to handle shared state?
+When designing a class how would you protect any state shared between multiple threads? (keyword synchronized, Java 5 locks, volatile, concurrent collections)
+What is the consequence of a method being marked static synchronized?
+What class would you use to choose to represent large amounts of money if you performing calculations on those amounts? If BigDecimal then how do you safely construct it? Are they aware of JSR-354 (Java Money API)?
+What's a Stream in Java 8 and how does it differ from a normal Collection class? What methods are available?
+What are the Function, Supplier and Consumer interfaces for? What benefits do they provide? What do you know about functional programming?
+Why is immutability important in functional programming? What's a monad? What's a lambda? What's a closure?
+Briefly explain the intent of the Strategy/Observer/Strategy/Factory/Decorator pattern?
+What's the point of the Atomic classes? (Atomic Reference, AtomicInteger)
+What's a weak reference in Java? What's a WeakHashMap and why might you use one? Can you distinguish between weak, soft, and phantom references?
+How does garbage collection work in Java? (They should be able to talk about Eden space, gc cycles, compacting, mark-and-sweep.) Can you force the VM to garbage collect? Are there different GC algorithms? (They should ideally know about CMS and G2 behaviour.) What behaviour might you want when and why?
+What is meant by the phrase 'dependency injection'? Why is it desirable? How does a dependency injection framework help? What DI frameworks have you used?
+Why is loose coupling important? Can you give a real world example of loose coupling? Why is it desirable? Have you heard of Robert Martin's SOLID principles?
+What's the difference between a 32-bit and 63-bit JVM? What are the consequences for performance?
+What's are the main practices behind agile development? Why are they important? (TDD/CI, short iterations, coding standards, collective ownership, on-site customer, pair programming, sprint planning and retros, refactoring, short/continuous releases, simple design/YAGNI)
+What's the benefit of a microservices based architecture? How do microservices and event-based architectures intersect?
+What's the Actor model about? What is it trying to achieve? What is a CompletableFuture in Java 8?
+What's new in Java 9? (modularization, improvements to streams, HTTP2, multi release jars)
+What's the difference between a unit test, an integration test and a user acceptance test?
+You are mentoring a more junior offshore developer on an offshore team. He confides to you that when writing a test is finding interaction with the database is really slowing exectution of the test suite and this is causing him and his team not to run the suite before checking in code. This is means occasionally breaking the build which is annoying your team in London. What advice would you offer?
+What's the difference between stubbing and mocking? What mocking frameworks have you used? Can you mock static methods?
+What java classes would you use for date/time operations? Tests which are date-time dependent can be break unexpectedly - can you propose a solution for this? (Ideally use Java Clocks but otherwise could use a service locator pattern to intercept calls to new Date())
+What's Behaviour Driven Developement? How does it differ from other types of testing? What tools might you use? What would you do if a colleague in order to save time proposes only writing behavioural tests?
+What's Lombok? What annotations have you used?
+If you had the power then what would you change about Java? What would you introduce and what would you take out of the language?
